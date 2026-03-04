@@ -27,41 +27,44 @@
                                 placeholder="About Title" required>
                         </div>
                         <div class="form-group">
-                            <label>About Image One</label>
-                            <input type="file" name="image1" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label>About Image Two</label>
-                            <input type="file" name="image2" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <label>About Details</label>
-                            <textarea id="tinymce" class="editor form-control" col="10" row="3" name="details1"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label>About Details one</label>
-                            <textarea id="tinymce" class="editor form-control" col="10" row="3" name="details2"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label>About Details two</label>
-                            <textarea id="tinymce" class="editor form-control" col="10" row="3" name="details3"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label>About Details three</label>
-                            <textarea id="tinymce" class="editor form-control" col="10" row="3" name="details4"></textarea>
-                        </div>
-                        <h3>Details page information</h3>
-                        <div class="form-group">
                             <label>About Banner Image</label>
                             <input type="file" name="banner_image" class="form-control">
                         </div>
-
                         <div class="form-group">
                             <label>About page Details</label>
                             <textarea id="tinymce" class="editor form-control" col="10" row="3" name="page_details"></textarea>
                         </div>
+
+                        <h3>Details page information</h3>
+                        <div class="form-group">
+                            <label>About Image One</label>
+                            <input type="file" name="image1" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>About Details One</label>
+                            <textarea id="tinymce" class="editor form-control" col="10" row="3" name="details1"></textarea>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>About Image Two</label>
+                            <input type="file" name="image2" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>About Details Two</label>
+                            <textarea id="tinymce" class="editor form-control" col="10" row="3" name="details2"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>About Details Three</label>
+                            <textarea id="tinymce" class="editor form-control" col="10" row="3" name="details3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>About Details Four</label>
+                            <textarea id="tinymce" class="editor form-control" col="10" row="3" name="details4"></textarea>
+                        </div>
+
+
+
 
 
 

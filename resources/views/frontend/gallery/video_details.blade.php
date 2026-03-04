@@ -7,20 +7,41 @@
     <!-- Content Wrapper Start -->
     <div class="content-wrapper">
 
-        <!-- Breadcrumb Start -->
-        <div class="breadcrumb-wrap bg-f" style="background-image: url({{ asset($banner->image ?? '') }});">
+        <!-- Breadcrumb / Hero Start -->
+        <div class="breadcrumb-wrap bg-f breadcrumb-hero" style="background-image: url({{ asset($banner->image ?? '') }});">
             <div class="container">
-                <div class="breadcrumb-title">
-                    <h2>{{ $video->title ?? 'Video' }}</h2>
-                    <ul class="breadcrumb-menu list-style">
-                        <li><a href="{{ route('front.page') }}">Home</a></li>
-                        <li><a href="{{ route('video.gallery.page') }}">Video Gallery</a></li>
-                        <li>{{ $video->title ?? 'Video Details' }}</li>
-                    </ul>
+                <div class="breadcrumb-hero-inner">
+                    <div class="hero-row d-flex align-items-center">
+                        <div class="hero-left col-lg-8">
+                            <h1 class="hero-title">{{ $video->title ?? 'Video' }}</h1>
+                            @if ($video->description)
+                                <p class="hero-sub">{{ $video->description }}</p>
+                            @endif
+                        </div>
+                        {{-- <div class="hero-right col-lg-4 text-right">
+                            <div class="find-us">Find us on:</div>
+                            <div class="social-icons">
+                                <a href="#" class="soc youtube" aria-label="YouTube"><i
+                                        class="fab fa-youtube"></i></a>
+                                <a href="#" class="soc spotify" aria-label="Spotify"><i
+                                        class="fab fa-spotify"></i></a>
+                                <a href="#" class="soc soundcloud" aria-label="SoundCloud"><i
+                                        class="fab fa-soundcloud"></i></a>
+                            </div>
+                        </div> --}}
+                    </div>
+
+                    <div class="breadcrumb-bottom mt-3">
+                        <ul class="breadcrumb-menu list-style">
+                            <li><a href="{{ route('front.page') }}">Home</a></li>
+                            <li><a href="{{ route('video.gallery.page') }}">Video Gallery</a></li>
+                            <li>{{ $video->title ?? 'Video Details' }}</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- Breadcrumb End -->
+        <!-- Breadcrumb / Hero End -->
 
         <!-- Video Details Section Start -->
         <section class="video-details-wrap ptb-100">
@@ -132,6 +153,104 @@
     <!-- Content wrapper end -->
 
     <style>
+        /* Hero / breadcrumb styles to match the requested design */
+        .breadcrumb-hero {
+            position: relative;
+            padding: 150px 0;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        .breadcrumb-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.7) 100%);
+            z-index: 0;
+        }
+
+        .breadcrumb-hero .breadcrumb-hero-inner,
+        .breadcrumb-hero .hero-row {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-size: clamp(28px, 4.5vw, 3.2rem);
+            line-height: 1.02;
+            font-weight: 800;
+            margin: 0 0 18px 0;
+            color: #fff;
+            letter-spacing: -1px;
+        }
+
+        .hero-sub {
+            font-size: clamp(14px, 1.6vw, 18px);
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 820px;
+            margin: 0;
+        }
+
+        .find-us {
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+        }
+
+        .social-icons .soc {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+        }
+
+        .social-icons .youtube {
+            background: #E53E3E;
+        }
+
+        .social-icons .spotify {
+            background: #1ED760;
+            color: #0b2a1a;
+        }
+
+        .social-icons .soundcloud {
+            background: #17a2b8;
+        }
+
+        /* hide the small breadcrumb on large screens so the hero looks clean */
+        @media (min-width: 992px) {
+            .breadcrumb-bottom .breadcrumb-menu {
+                display: none;
+            }
+        }
+
+        /* hide duplicate video title/description card on larger screens (we show them in the hero) */
+        @media (min-width: 769px) {
+            .video-details-content {
+                padding: 0;
+                background: transparent;
+                box-shadow: none;
+            }
+
+            .video-details-title,
+            .video-details-description {
+                display: none;
+            }
+        }
+
         .video-details-wrap {
             background: #fafafa;
         }

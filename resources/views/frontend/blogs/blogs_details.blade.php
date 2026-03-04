@@ -22,9 +22,9 @@
 
         <!-- Blog Details Section Start -->
         <section class="section-modern section-modern-light">
-            <div class="container">
+            <div class="container-fluid px-4 px-lg-5">
                 <div class="row justify-content-center">
-                    <div class="col-xl-10 col-lg-11">
+                    <div class="col-xxl-10 col-xl-11 col-lg-12">
                         <article class="blog-details-modern" data-aos="fade-up" data-aos-duration="1200">
                             <div class="blog-details-header-modern">
                                 <div class="blog-meta-modern mb-2">
