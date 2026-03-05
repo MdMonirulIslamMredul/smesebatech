@@ -140,10 +140,15 @@
                             <a href="{{ route('team.page') }}"
                                 class="nav-link {{ Request::routeIs('team.page') ? 'active' : '' }}">Team</a>
                         </li>
-                        <li class="nav-item">
+
+
+                        {{-- <li class="nav-item">
                             <a href="{{ route('management.page') }}"
                                 class="nav-link {{ Request::routeIs('management.page') ? 'active' : '' }}">Management</a>
-                        </li>
+                        </li> --}}
+
+
+
                         {{-- <li class="nav-item"> --}}
                         {{--                            <a href="#" class="nav-link"> --}}
                         {{--                                Pages --}}

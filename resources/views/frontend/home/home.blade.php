@@ -32,26 +32,27 @@
         </div>
 
     </section>
-
     <!-- Hero Section End -->
 
-    <!-- Ab
-                            out Section Start -->
+
+    <!-- About Section Start -->
     @include('frontend.about.about')
     <!-- About Section End -->
+
 
     <!-- Service Section Start -->
 
 
     <!-- Service Section End -->
 
-    <!-- Team Section Start -->
-    @include('frontend.team.team')
-    <!-- Team Section End -->
+
+
 
 
     <!-- Pricing Section Start -->
-    @include('frontend.package.package')
+
+    {{-- @include('frontend.package.package') --}}
+
     <!-- Pricing Section End -->
 
 
@@ -67,17 +68,52 @@
     @include('frontend.blogs.blogs')
     <!-- Blog Section End -->
 
+
+    <!-- Video Gallery will be rendered via the included blogs partial -->
+
+
+
+    <!-- Team Section Start -->
+    @include('frontend.team.team')
+    <!-- Team Section End -->
+
+
+    {{-- patner section start --}}
     <div class="row">
         <div class="col-md-12 ">
             <div class="section-title style1 text-center mb-40">
 
-
                 <h2 style="color:#0cc0df">Our Corporate Partners</h2>
                 <hr>
+                <section class="section-modern section-modern-light" style="padding: 60px 0;">
+                    <div class="container">
+                        <div class="section-header-modern text-center" data-aos="fade-up" data-aos-duration="1200">
+                            {{-- <span class="section-subtitle-modern">Trusted Partners</span>
+                            <h2 class="section-title-modern">Our Trusted Partners</h2> --}}
+                        </div>
+
+                        <div class="row g-4 justify-content-center align-items-center">
+                            @foreach ($partner as $pt)
+                                <div class="col-lg-2 col-md-3 col-4 text-center" data-aos="fade-up" data-aos-duration="1200"
+                                    data-aos-delay="{{ $loop->index * 50 }}">
+                                    <div style="padding: 1.5rem; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: all 0.3s ease;"
+                                        onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(54, 209, 220, 0.15)';"
+                                        onmouseout="this.style.transform=''; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)';">
+                                        <img src="{{ asset('partner/' . $pt->image) }}" alt="Partner"
+                                            style="width: 100%; height: auto; object-fit: contain;">
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </section>
 
             </div>
         </div>
     </div>
+    {{-- patner section end --}}
+
+
 
     {{-- CTA Section --}}
     <section class="cta-modern">
@@ -89,29 +125,4 @@
             </div>
         </div>
     </section>
-
-    {{-- Partner Section --}}
-    <section class="section-modern section-modern-light" style="padding: 60px 0;">
-        <div class="container">
-            <div class="section-header-modern text-center" data-aos="fade-up" data-aos-duration="1200">
-                <span class="section-subtitle-modern">Trusted Partners</span>
-                <h2 class="section-title-modern">Our Trusted Partners</h2>
-            </div>
-
-            <div class="row g-4 justify-content-center align-items-center">
-                @foreach ($partner as $pt)
-                    <div class="col-lg-2 col-md-3 col-4 text-center" data-aos="fade-up" data-aos-duration="1200"
-                        data-aos-delay="{{ $loop->index * 50 }}">
-                        <div style="padding: 1.5rem; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: all 0.3s ease;"
-                            onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(54, 209, 220, 0.15)';"
-                            onmouseout="this.style.transform=''; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)';">
-                            <img src="{{ asset('partner/' . $pt->image) }}" alt="Partner"
-                                style="width: 100%; height: auto; object-fit: contain;">
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-    {{-- partner end --}}
 @endsection
