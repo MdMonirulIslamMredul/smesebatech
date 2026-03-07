@@ -7,7 +7,7 @@
     <section class="hero-wrap style2" style="padding: 0px;">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
 
-            500px<div class="carousel-inner mt-5">
+            <div class="carousel-inner mt-5">
                 @foreach ($banners as $key => $banner)
                     <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
                         <div class="img-gradient">

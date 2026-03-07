@@ -266,7 +266,7 @@ a {
    ============================================ */
 
 .section-modern {
-    padding: 100px 0;
+    padding: 50px 0;
     position: relative;
 }
 
@@ -1053,7 +1053,7 @@ textarea.form-control-modern {
 
 @media (max-width: 991px) {
     .section-modern {
-        padding: 70px 0;
+        padding: 50px 0;
     }
 
     .modern-card {
