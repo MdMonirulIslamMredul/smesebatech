@@ -193,20 +193,20 @@
         /* Modern Hero Section */
         .modern-hero {
             padding: 80px 0 60px;
-            background: #fff;
+            background: var(--white);
         }
 
         .modern-hero-title {
             font-size: clamp(32px, 6vw, 56px);
             font-weight: 700;
-            color: #111827;
+            color: var(--text-primary);
             margin-bottom: 20px;
             line-height: 1.1;
         }
 
         .modern-hero-subtitle {
             font-size: 18px;
-            color: #6b7280;
+            color: var(--text-muted);
             max-width: 800px;
             margin: 0 auto 0;
             line-height: 1.6;
@@ -223,15 +223,16 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
         }
 
+
         /* Numbered Sections */
         .numbered-sections {
             padding: 60px 0;
-            background: #fff;
+            background: var(--white);
         }
 
         .numbered-section {
             padding: 60px 0;
-            border-bottom: 1px solid #e5e7eb;
+            border-bottom: 1px solid var(--border-color);
         }
 
         .numbered-section:last-child {
@@ -245,7 +246,7 @@
         .section-number {
             font-size: 48px;
             font-weight: 700;
-            color: #111827;
+            color: var(--text-primary);
             display: block;
             margin-bottom: 20px;
             line-height: 1;
@@ -253,14 +254,14 @@
 
         .section-text {
             font-size: 16px;
-            color: #374151;
+            color: var(--text-secondary);
             line-height: 1.7;
         }
 
         .section-text h3,
         .section-text h4,
         .section-text h5 {
-            color: #111827;
+            color: var(--text-primary);
             font-weight: 600;
             margin-bottom: 15px;
             margin-top: 0;
@@ -312,20 +313,20 @@
         }
 
         .btn-modern-light {
-            background: #fff;
+            background: var(--white);
             color: #667eea;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         .btn-modern-light:hover {
-            background: #f9fafb;
+            background: var(--light-bg);
             color: #667eea;
         }
 
         /* CTA Banner */
         .cta-banner-section {
             padding: 60px 0;
-            background: #f9fafb;
+            background: var(--light-bg);
         }
 
         .cta-banner {
@@ -352,7 +353,7 @@
         /* Testimonials Section */
         .testimonials-section {
             padding: 80px 0;
-            background: #fff;
+            background: var(--white);
         }
 
         .section-header-center {
@@ -373,8 +374,8 @@
         }
 
         .testimonial-card-modern {
-            background: #fff;
-            border: 1px solid #e5e7eb;
+            background: var(--white);
+            border: 1px solid var(--border-color);
             border-radius: 16px;
             padding: 40px;
             margin: 15px;
@@ -408,7 +409,7 @@
 
         .testimonial-review p {
             font-size: 16px;
-            color: #374151;
+            color: var(--text-secondary);
             line-height: 1.7;
             margin: 0;
         }
@@ -430,19 +431,19 @@
             height: 60px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #f3f4f6;
+            border: 3px solid var(--white);
         }
 
         .testimonial-author-info-modern h5 {
             font-size: 18px;
             font-weight: 600;
-            color: #111827;
+            color: var(--text-primary);
             margin: 0 0 5px;
         }
 
         .testimonial-author-info-modern p {
             font-size: 14px;
-            color: #6b7280;
+            color: var(--text-muted);
             margin: 0;
         }
 

@@ -1,6 +1,66 @@
+.theme-dark .btn-cta-light {
+  background: var(--dark-bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.theme-dark .btn-cta-light:hover {
+  background: var(--primary-gradient-end) !important;
+  color: #fff !important;
+  border-color: var(--primary-gradient-end) !important;
+}
+
+
+.theme-dark .btn-cta-primary {
+  background: var(--primary-gradient-start) !important;
+  color: #fff !important;
+  border-color: var(--primary-gradient-start) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.theme-dark .btn-cta-primary:hover {
+  background: var(--primary-gradient-end) !important;
+  color: #fff !important;
+  border-color: var(--primary-gradient-end) !important;
+}
+
+.theme-dark .video-card-content
+ {
+    background-color: #2b2a2a !important;
+    color: var(--text-secondary) !important;
+    border-color: var(--border-color) !important;
+    padding: 18px;
+    flex: 1 1 auto;
+
+}
+
+.theme-dark .team-card-improved .team-mail
+{
+    background-color: #2b2a2a !important;
+}
+
+
 /*-------------------------------
     Dark Theme  CSS
 -------------------------------*/
+/* CSS variable overrides when dark theme is active on <html> */
+html.theme-dark {
+  --primary-gradient-start: #36d1dc;
+  --primary-gradient-end: #5865f2;
+  --dark-bg: #071018;
+  --dark-bg-secondary: #0f1720;
+  --light-bg: #0b0f12;
+  --white: #0b0f12;
+  --text-primary: #f6f7f8;
+  --text-secondary: rgba(255,255,255,0.85);
+  --text-muted: rgba(255,255,255,0.65);
+  --border-color: rgba(255,255,255,0.06);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.6);
+  --shadow-md: 0 4px 15px rgba(0,0,0,0.6);
+  --shadow-lg: 0 8px 25px rgba(0,0,0,0.6);
+  --shadow-hover: 0 12px 35px rgba(54, 209, 220, 0.15);
+}
 .switch-theme-mode {
   position: fixed;
   top: 200px;
@@ -82,7 +142,7 @@ input:checked + .slider:before {
 }
 
 /*---------------------------------
-    Color CSS For Elements 
+    Color CSS For Elements
 -----------------------------------*/
 .theme-light .navbar-brand .logo-dark {
   display: none !important;
@@ -373,6 +433,76 @@ input:checked + .slider:before {
 .theme-dark .login-form-wrap,
 .theme-dark .book-appointment-form {
   border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Force overrides for inline styles and view-level CSS that set explicit white backgrounds */
+/* About section: override inline background:white on .modern-card */
+.theme-dark .modern-card {
+  background: var(--white) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.theme-dark .modern-card .content-description-modern {
+  color: var(--text-secondary) !important;
+}
+
+/* Testimonial section overrides (the view injects styles and inline background) */
+.theme-dark #testimonial-section {
+  background: var(--dark-bg) !important;
+}
+
+.theme-dark #testimonial-section .testimonial-card-modern {
+  background: var(--white) !important;
+  color: var(--text-secondary) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6) !important;
+}
+
+.theme-dark #testimonial-section .testimonial-avatar-circle {
+  border: 6px solid rgba(255,255,255,0.95) !important;
+  background-color: var(--light-bg) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6) !important;
+}
+
+.theme-dark #testimonial-section .testimonial-quote-modern,
+.theme-dark #testimonial-section .testimonial-quote-modern p {
+  color: var(--text-secondary) !important;
+}
+
+.theme-dark #testimonial-section .testimonial-author-info-modern h5,
+.theme-dark #testimonial-section .testimonial-author-info-modern p {
+  color: var(--text-primary) !important;
+}
+
+/* General helper: override any explicit .bg-white elements inside dark theme */
+.theme-dark .bg-white {
+  background-color: transparent !important;
+}
+
+/* Additional overrides for elements using .bg-light or inline white backgrounds */
+.theme-dark .bg-light {
+  background-color: transparent !important;
+  color: var(--text-secondary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.theme-dark .component-card {
+  background: var(--light-bg) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.theme-dark .content-block {
+  background: transparent !important;
+  color: var(--text-secondary) !important;
+}
+
+.theme-dark .sidebar-card {
+  background: var(--light-bg) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
 }
 
 @media only screen and (max-width: 991px) {

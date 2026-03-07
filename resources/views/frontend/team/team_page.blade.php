@@ -128,12 +128,13 @@
                     .team-card-improved:hover {
                         transform: translateY(-8px);
                         box-shadow: 0 18px 40px rgba(0, 0, 0, .12);
+
                     }
 
                     .team-card-improved .team-overlay .btn {
                         padding: .45rem .85rem;
                         font-size: .9rem;
-                        background: #fff;
+                        background: #53707e;
                         color: #111;
                         font-weight: 600;
                         border-radius: .35rem;

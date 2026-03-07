@@ -7,8 +7,8 @@
 
         <div class="row gx-5 align-items-center">
             <div class="col-lg-12" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
-                <div class="modern-card" style="background: white; padding: 3rem;">
-                    <div class="content-description-modern" style="font-size: 1.05rem; line-height: 1.8; color: #555;">
+                <div class="modern-card" style="padding: 3rem;">
+                    <div class="content-description-modern" style="font-size: 1.05rem; line-height: 1.8;">
                         {!! $about->page_details ?? null !!}
                     </div>
                     {{-- <div class="feature-item-wrap">

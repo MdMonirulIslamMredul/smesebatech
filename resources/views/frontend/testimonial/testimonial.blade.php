@@ -1,4 +1,4 @@
-<section class="section-modern" id="testimonial-section" style="background: #f8f9fa;">
+<section class="section-modern" id="testimonial-section">
     <div class="container">
         <div class="section-header-modern" data-aos="fade-up" data-aos-duration="1200">
             <span class="section-subtitle-modern">Client Success Stories</span>
@@ -59,7 +59,7 @@
     /* Testimonial design - centered card with overlapping circular avatar */
     #testimonial-section .testimonial-slider-two .testimonial-card-modern {
         position: relative;
-        background: #fff;
+        background: var(--white);
         border-radius: 12px;
         padding: 34px 26px 28px;
         box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
@@ -81,9 +81,9 @@
         height: 88px;
         border-radius: 50%;
         overflow: hidden;
-        border: 6px solid #fff;
+        border: 6px solid var(--white);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        background: #fff;
+        background-color: var(--white);
     }
 
     /* Use background-image to control focal point and prevent inconsistent cropping */
@@ -99,7 +99,7 @@
         /* spacing to account for avatar */
         position: relative;
         padding: 12px 18px 0;
-        color: #374151;
+        color: var(--text-secondary);
     }
 
     .testimonial-quote-modern i {
@@ -117,7 +117,7 @@
         font-size: 15px;
         line-height: 1.7;
         max-width: 320px;
-        color: #475569;
+        color: var(--text-secondary);
     }
 
     /* Stars */
@@ -140,13 +140,13 @@
         margin: 6px 0 2px;
         font-size: 16px;
         font-weight: 700;
-        color: #0f172a;
+        color: var(--text-primary);
     }
 
     .testimonial-author-info-modern p {
         margin: 0;
         font-size: 13px;
-        color: #94a3b8;
+        color: var(--text-muted);
     }
 
     @media (max-width: 991px) {
